@@ -1,0 +1,42 @@
+# Dataset
+
+## Source
+This project uses the **UCDavis QUIC Network Traffic Dataset**  
+Available on Kaggle: https://www.kaggle.com/datasets/guillaumefraysse/ucdavisquic
+
+## About the Dataset
+- **Protocol:** QUIC (the transport layer behind HTTP/3)
+- **Total Packets:** 344,539
+- **Captured from:** Real Google service traffic
+
+## Traffic Classes
+| Class ID | Service | Traffic Type |
+|----------|---------|--------------|
+| 0 | Google Drive | File transfer / bulk upload |
+| 1 | Google Docs | Real-time collaboration |
+| 2 | Google Music | Audio streaming |
+| 3 | Google Search | Web browsing |
+| 4 | YouTube | Video streaming |
+
+## Features
+| Feature | Description |
+|---------|-------------|
+| timestamp | Unix timestamp of packet capture |
+| time_delta | Time gap since previous packet (seconds) |
+| packet_size | Size of packet in bytes |
+| direction | 0 = inbound, 1 = outbound |
+| Type | Traffic class label (target variable) |
+
+## Why This Dataset?
+QUIC is an encrypted protocol — traditional Deep Packet Inspection
+cannot classify it by reading payload content.
+This makes it a perfect use case for ML-based classification
+using only flow-level features (size, timing).
+
+## How to Download
+The notebook automatically downloads the dataset using kagglehub:
+​```python
+import kagglehub
+path = kagglehub.dataset_download("guillaumefraysse/ucdavisquic")
+​```
+No manual download needed.
