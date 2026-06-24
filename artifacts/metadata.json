@@ -1,0 +1,120 @@
+{
+  "typename": {
+    "0": "Google Doc",
+    "1": "Google Drive",
+    "2": "Google Music",
+    "3": "Google Search",
+    "4": "Youtube"
+  },
+  "feature_names": [
+    "time_delta",
+    "packet_size"
+  ],
+  "class_names": [
+    "Google Doc",
+    "Google Drive",
+    "Google Music",
+    "Google Search",
+    "Youtube"
+  ],
+  "train_accuracy": 0.9834140329896306,
+  "test_accuracy": 0.893667600046669,
+  "best_params": {
+    "rf__n_estimators": 300
+  },
+  "classification_report": {
+    "Google Doc": {
+      "precision": 0.885940594059406,
+      "recall": 0.8833168805528134,
+      "f1-score": 0.8846267918932279,
+      "support": 5065.0
+    },
+    "Google Drive": {
+      "precision": 0.8985625538475491,
+      "recall": 0.8964082149642632,
+      "f1-score": 0.8974840915781608,
+      "support": 22106.0
+    },
+    "Google Music": {
+      "precision": 0.8885747938751473,
+      "recall": 0.8841315727791234,
+      "f1-score": 0.8863476149447795,
+      "support": 12799.0
+    },
+    "Google Search": {
+      "precision": 0.8580697485806975,
+      "recall": 0.8450479233226837,
+      "f1-score": 0.8515090543259557,
+      "support": 1252.0
+    },
+    "Youtube": {
+      "precision": 0.8951158308179074,
+      "recall": 0.9000585094712207,
+      "f1-score": 0.8975803657713838,
+      "support": 27346.0
+    },
+    "accuracy": 0.893667600046669,
+    "macro avg": {
+      "precision": 0.8852527042361414,
+      "recall": 0.8817926202180209,
+      "f1-score": 0.8835095837027016,
+      "support": 68568.0
+    },
+    "weighted avg": {
+      "precision": 0.8936518863878536,
+      "recall": 0.893667600046669,
+      "f1-score": 0.8936545206429328,
+      "support": 68568.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      4474,
+      288,
+      94,
+      32,
+      177
+    ],
+    [
+      350,
+      19816,
+      393,
+      24,
+      1523
+    ],
+    [
+      67,
+      364,
+      11316,
+      3,
+      1049
+    ],
+    [
+      27,
+      18,
+      14,
+      1058,
+      135
+    ],
+    [
+      132,
+      1567,
+      918,
+      116,
+      24613
+    ]
+  ],
+  "feature_importances": [
+    0.7869344765448192,
+    0.21306552345518087
+  ],
+  "n_train_samples": 274268,
+  "n_test_samples": 68568,
+  "routing_policy": {
+    "Google Drive": "Standard Path (bulk transfer)",
+    "Google Docs": "Low Latency Path (real-time collaboration)",
+    "Google Music": "High Bandwidth (streaming)",
+    "Google Search": "Standard Path (web browsing)",
+    "YouTube": "High Bandwidth (video streaming)"
+  }
+}
